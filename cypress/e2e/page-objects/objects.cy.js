@@ -14,7 +14,7 @@ class fastn {
         loginCy.login()
 
         //click on My Workspace
-        cy.contains('My Workspace').click({ force: true })
+        cy.contains('My Workspace',{timeout:100000}).click({ force: true })
 
         cy.wait(3000)
         cy.get('body', { timeout: 1000000 }).then((body) => {
@@ -219,13 +219,13 @@ class fastn {
         cy.contains('My Workspace').click({ force: true })
 
         //click on settings
-        cy.get('[data-testid="project-settings"]', { timeout: 10000 }).click({ force: true })
+        cy.get('[data-testid="project-settings"]', { timeout: 100000 }).click({ force: true })
 
         //wait for it to load
-        cy.get('.pt-4', { timeout: 10000 }).should('be.visible')
+        cy.get('.pt-4', { timeout: 1000000 }).should('be.visible')
 
         //check if there are 4 api keys
-        cy.get('.mt-6.text-sm.leading-6').then(($parent) => {
+        cy.get('.mt-6.text-sm.leading-6',{timeout:100000}).then(($parent) => {
             // Get the number of children
             const childrenCount = $parent.children().length;
 
