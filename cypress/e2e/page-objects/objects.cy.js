@@ -128,6 +128,7 @@ class fastn {
         cy.get('[data-testid="doneTokenBtn"]').click({ force: true })
 
         //change sdk to react to extract space-id 
+        cy.wait(3000)
         cy.get('[data-testid="sdk"]', { timeout: 100000 }).select('React')
         cy.wait(6000)
         //extract space-id
