@@ -17,6 +17,7 @@ class fastn {
         //click on My Workspace
         cy.contains('My Workspace').click({ force: true })
 
+        cy.wait(5000)
         //click on Flows
         cy.get('[data-testid="apis"]', { timeout: 100000 }).click({ force: true })
 
