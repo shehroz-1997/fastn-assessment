@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^14.2.1"
+    "cypress": "^14.2.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "dependencies": {
     "@4tw/cypress-drag-drop": "^2.3.0"

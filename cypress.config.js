@@ -4,12 +4,23 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   pageLoadTimeout: 100000,
   chromeWebSecurity: false,
-  
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'fastn assessment',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: true,
+    html: true,
+    autoOpen:true,
+    reportDir: 'cypress/reports/fastn-test-reports',
+    reportFilename: "[status]_[fastn-assessment]-report",
+    
+  },
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
-  },
+  }
 });
 
