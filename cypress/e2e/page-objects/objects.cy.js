@@ -36,6 +36,7 @@ class fastn {
         cy.wait(3000)
         cy.get('body', { timeout: 1000000 }).then((body) => {
             // Check if .api-item exists in the body
+            cy.wait(5000)
             if (body.find('.api-item').length > 0) {
                 // If it exists, click the button (adjust the selector for your button)
                 cy.get('[data-testid="add-api"]').click();
@@ -128,7 +129,7 @@ class fastn {
 
         //change sdk to react to extract space-id 
         cy.get('[data-testid="sdk"]', { timeout: 100000 }).select('React')
-        cy.wait(4000)
+        cy.wait(6000)
         //extract space-id
         cy.get('span.mtk20')
             .contains('x-fastn-space-id')  // Find the span with the "x-fastn-space-id" text
