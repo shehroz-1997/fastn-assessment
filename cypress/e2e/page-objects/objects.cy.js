@@ -65,6 +65,7 @@ class fastn {
         cy.contains('Dismiss', { timeout: 100000 }).click({ force: true })
 
         //drag n drop the required node
+        cy.wait(5000)
         cy.get('[data-testid="Output"]').drag('#addFirstNode >.h-3 >path');
         //cy.get('[data-testid="Output"]')
 
